@@ -21,5 +21,6 @@ namespace AutomationFramework.Utils
             return page;
         }
         public LoginPage LoginPage => GetPages<LoginPage>();
+        public ContactPage ContactPage => GetPages<ContactPage>();
     }
 }
