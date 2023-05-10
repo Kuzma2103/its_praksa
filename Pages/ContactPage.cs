@@ -4,11 +4,18 @@ namespace AutomationFramework.Pages
 {
     public class ContactPage : BasePage
     {
+        /// <summary>
+        /// Konstruktor bez parametara
+        /// </summary>
         public ContactPage()
         {
             driver = null;
         }
 
+        /// <summary>
+        /// Konstruktor sa parametrima
+        /// </summary>
+        /// <param name="webDriver">driver</param>
         public ContactPage(IWebDriver webDriver)
         {
             driver = webDriver;
@@ -56,6 +63,9 @@ namespace AutomationFramework.Pages
             WriteTextToElement(messageField, message);
         }
 
+        /// <summary>
+        /// Metoda koja klikne na dugme Send message
+        /// </summary>
         private void ClickOnSendMessage()
         {
             ClickOnElement(sendMessageButton);
