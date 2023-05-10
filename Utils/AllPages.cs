@@ -22,5 +22,9 @@ namespace AutomationFramework.Utils
         }
         public LoginPage LoginPage => GetPages<LoginPage>();
         public ContactPage ContactPage => GetPages<ContactPage>();
+
+        public SignUpPage SignUpPage => GetPages<SignUpPage>();
+        public HomePage HomePage => GetPages<HomePage>();
+        public CartPage CartPage => GetPages<CartPage>();
     }
 }

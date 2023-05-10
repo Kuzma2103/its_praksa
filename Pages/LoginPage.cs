@@ -34,26 +34,43 @@ namespace AutomationFramework.Pages
         By loginLink = By.Id("login2");
         By nameOfUser = By.Id("nameofuser");
 
+        /// <summary>
+        /// Metoda koja upisuje username u polje
+        /// </summary>
+        /// <param name="username">Username</param>
         private void EnterUsername(string username)
         {
             WriteTextToElement(usernameField, username);
         }
 
+        /// <summary>
+        /// Metoda koja upisuje password u polje
+        /// </summary>
+        /// <param name="password">Password</param>
         private void EnterPassword(string password)
         {
             WriteTextToElement(passwordField, password);
         }
 
+        /// <summary>
+        /// Metoda koja klikne na dugme Login
+        /// </summary>
         private void ClickOnLoginButton()
         {
             ClickOnElement(loginButton);
         }
 
+        /// <summary>
+        /// Metoda koja klikne na link Login
+        /// </summary>
         private void ClickOnLogInLink()
         {
             ClickOnElement(loginLink);
         }
 
+        /// <summary>
+        /// Metoda koja vraca vrednost username-a
+        /// </summary>
         public string GetUsername()
         {
             return ReadTextFromElement(nameOfUser);

@@ -2,6 +2,8 @@
 using OpenQA.Selenium.Support.UI;
 using SeleniumExtras.WaitHelpers;
 using System;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Threading;
 
 namespace AutomationFramework.Pages
@@ -57,7 +59,43 @@ namespace AutomationFramework.Pages
             Thread.Sleep(1000);
             return driver.SwitchTo().Alert().Text;
         }
-        
+
+        /// <summary>
+        /// Metoda koja potvrdjuje alert box
+        /// </summary>
+        public void AcceptAlertBox()
+        {
+            Thread.Sleep(1000);
+            driver.SwitchTo().Alert().Accept();
+        }
+
+        /// <summary>
+        /// Metoda koja vraca vrednosti celija iz prvog reda u tabeli
+        /// </summary>
+        /// <returns></returns>
+        public List<string> GetValuesFromFirstTableRow()
+        {
+            List<string> values = new List<string>();
+            ReadOnlyCollection<IWebElement> rows = driver.FindElements(By.XPath("//tr[@class='success']"));
+
+            try
+            {
+                IWebElement firstRow = rows[0];
+                ReadOnlyCollection<IWebElement> cells = driver.FindElements(By.XPath("//tr[@class='success']/td"));
+
+                foreach (IWebElement cell in cells)
+                {
+                    values.Add(cell.Text);
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+
+            return values;
+        }
+
     }
-    
+
 }
