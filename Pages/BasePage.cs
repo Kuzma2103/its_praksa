@@ -80,8 +80,11 @@ namespace AutomationFramework.Pages
 
             try
             {
-                IWebElement firstRow = rows[0];
-                ReadOnlyCollection<IWebElement> cells = driver.FindElements(By.XPath("//tr[@class='success']/td"));
+                IWebElement firstRow = rows[0]; // sa 85 linijom ova linija je nepotrebna
+                ReadOnlyCollection<IWebElement> cells = firstRow.FindElements(By.XPath("./td"));
+
+                // Drugi nacin dohvatanja podataka iz prvog reda u tabeli
+                //ReadOnlyCollection<IWebElement> cells = driver.FindElements(By.XPath("//tr[@class='success'][1]/td"));
 
                 foreach (IWebElement cell in cells)
                 {
@@ -94,8 +97,10 @@ namespace AutomationFramework.Pages
             }
 
             return values;
+
         }
 
     }
 
+    
 }
