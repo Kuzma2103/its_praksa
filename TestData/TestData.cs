@@ -7,6 +7,11 @@
             public const string ProductAdded = "Product added.";
         }
 
+        public static class PopUpMessages
+        {
+            public const string PurchaseComplete = "Thank you for your purchase!";
+        }
+
         public static class Login
         {
             public const string username = "test",
@@ -32,6 +37,16 @@
         {
             public const string categoryName = "Phones",
                                 itemName = "Iphone 6 32gb";
+        }
+
+        public static class PurchaseItem
+        {
+            public const string name = "Vuk",
+                country = "Banglades",
+                city = "Madrid",                
+                month = "12",
+                year = "1947";
+            public const long creditCard = 2050000001234533;
         }
     }
 }

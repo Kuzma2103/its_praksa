@@ -20,5 +20,17 @@ namespace AutomationFramework.Pages
         {
             driver= webDriver;
         }
+
+        // Locators
+
+        By placeOrderButton = By.XPath("//button[contains(., 'Place Order')]");
+
+        /// <summary>
+        /// Metoda koja klikne na dugme Place order
+        /// </summary>
+        public void ClickOnPlaceOrderButton()
+        {
+            ClickOnElement(placeOrderButton);
+        }
     }
 }

@@ -26,5 +26,6 @@ namespace AutomationFramework.Utils
         public SignUpPage SignUpPage => GetPages<SignUpPage>();
         public HomePage HomePage => GetPages<HomePage>();
         public CartPage CartPage => GetPages<CartPage>();
+        public PurchasePage PurchasePage => GetPages<PurchasePage>();
     }
 }
