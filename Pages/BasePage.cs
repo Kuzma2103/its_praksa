@@ -43,6 +43,17 @@ namespace AutomationFramework.Pages
         }
 
         /// <summary>
+        /// Metoda koja upisuje string kroz parametar int
+        /// </summary>
+        /// <param name="element">element</param>
+        /// <param name="number">broj</param>
+        public void WriteTextToElement(By element, long number)
+        {
+            WaitElementVisibility(element);
+            driver.FindElement(element).SendKeys(number.ToString());
+        }
+
+        /// <summary>
         /// Metoda koja cita text iz elementa
         /// </summary>
         public string ReadTextFromElement(By element)
