@@ -111,6 +111,19 @@ namespace AutomationFramework.Pages
 
         }
 
+        /// <summary>
+        /// Metoda koja kreira jedinstvenog korisnika, kreirajuci random broj
+        /// kao sufix na "Random User" string
+        /// </summary>
+        /// <returns></returns>
+        public string GenerateRandomUsername()
+        {
+            Random random = new Random();
+            int randomNumber = random.Next(1000, 9999);
+            string username = "Random User " + randomNumber;
+            return username;
+        }
+
     }
 
     
