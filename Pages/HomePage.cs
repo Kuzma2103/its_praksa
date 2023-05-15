@@ -92,6 +92,7 @@ namespace AutomationFramework.Pages
         {
             Thread.Sleep(1000);
             ClickOnCategory(categoryName);
+            Thread.Sleep(1000);
             ClickOnItem(itemName);
         }
 

@@ -39,6 +39,12 @@
                                 itemName = "Iphone 6 32gb";
         }
 
+        public static class RemoveItemFromCart
+        {
+            public const string categoryName = "Monitors",
+                                itemName = "ASUS Full HD";
+        }
+
         public static class PurchaseItem
         {
             public const string name = "Vuk",
