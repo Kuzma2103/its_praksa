@@ -25,6 +25,7 @@ namespace AutomationFramework.Pages
         // Locators
         By addToCartButton = By.XPath("//a[contains(text(), 'Add to cart')]");
         By cartLink = By.Id("cartur");
+        By logoutLink = By.Id("logout2");
 
         /// <summary>
         /// Metoda koja klikne na odredjenu kategoriju - Phones
@@ -60,6 +61,26 @@ namespace AutomationFramework.Pages
         {
             ClickOnElement(cartLink);
             Thread.Sleep(3000);
+        }
+
+        /// <summary>
+        /// Metoda koja klikne na link Log out
+        /// </summary>
+        public void ClickOnLogoutLink()
+        {
+            ClickOnElement(logoutLink);
+            Thread.Sleep(1000);
+        }
+
+        /// <summary>
+        /// Metoda koja proverava da li je link vidljiv
+        /// </summary>
+        /// <param name="linkId">locator linka po id</param>
+        /// <returns>vraca true ako je vidljiv, false ako nije</returns>
+        public bool IsLinkDisplayed(string linkId)
+        {
+            By linkLocator = By.Id(linkId);
+            return driver.FindElement(linkLocator).Displayed;
         }
 
         /// <summary>

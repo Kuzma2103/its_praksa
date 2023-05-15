@@ -108,7 +108,6 @@ namespace AutomationFramework.Pages
             }
 
             return values;
-
         }
 
         /// <summary>
